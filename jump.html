@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>跳一跳小游戏 · 准备</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="viewport" aria-label="跳一跳小游戏">
+    <div class="screen" data-node-id="1833:3408">
+      <button class="control back" aria-label="返回"><img data-asset="assets/close.svg" alt=""></button>
+      <button class="control music" aria-label="关闭所有音效" aria-pressed="true"><img class="music-note" data-asset="assets/music-note.png" alt=""><img class="music-slash" data-asset="assets/mute.svg" alt=""><span class="music-slash-white" aria-hidden="true"></span></button>
+      <section class="score" aria-label="音浪 0，步数 0">
+        <img class="score-border" data-asset="assets/score-border.svg" alt="">
+        <div class="score-glow"><img class="glow-bottom" data-asset="assets/glow-bottom.svg" alt=""><img class="glow-top" data-asset="assets/glow-top.svg" alt=""></div>
+        <span class="score-label wave-label">音浪</span><strong class="wave-value">0</strong>
+        <span class="score-label steps-label">步数</span><strong class="steps-value">0</strong>
+        <img class="sparkle-small" data-asset="assets/sparkle-small.svg" alt=""><img class="sparkle-large" data-asset="assets/sparkle-large.svg" alt="">
+      </section>
+      <section class="banner" aria-label="准备">
+        <div class="ribbon-top"></div><div class="ribbon-bottom"></div><div class="ribbon"></div>
+        <img class="chevrons" data-asset="assets/chevrons.svg" alt="">
+        <div class="countdown" role="status" aria-live="polite" aria-atomic="true">
+          <img class="ready" data-asset="assets/ready.svg" alt="准备" width="197" height="121">
+          <span class="countdown-number" hidden></span>
+        </div>
+      </section>
+      <div class="character" role="img" aria-label="戴蓝色帽子的小鸭拿着三角铁，站在橙色鼓台上">
+        <img class="drum-shadow" data-asset="assets/drum-shadow.svg" alt="">
+        <img class="drum" data-asset="assets/drum.png" alt="" width="223" height="133">
+        <img class="duck-shadow" data-asset="assets/game-duck-shadow.svg" alt="">
+        <img class="soft-shadow" data-asset="assets/soft-shadow.svg" alt="">
+        <img class="back-duck" data-asset="assets/game-duck.png" alt="" width="148" height="189">
+        <img class="duck" data-asset="assets/duck.png" alt="" width="148.484" height="198">
+        <canvas class="turn-sequence" width="560" height="680" hidden aria-hidden="true"></canvas>
+      </div>
+      <div class="game-background" aria-hidden="true"><div class="game-background-top"></div><div class="game-background-side"></div></div>
+      <section class="game-scene" aria-label="跳一跳游戏场景" hidden>
+        <div class="game-world" role="img" aria-label="俯视背面的小鸭站在初始鼓台上，前方是新的鼓台">
+          <img class="game-shadow-left first-drum" data-asset="assets/drum-shadow.svg" alt="">
+          <img class="game-shadow-right" data-asset="assets/game-shadow-right.svg" alt="">
+          <div class="game-orange first-drum"><img data-asset="assets/drum.png" alt=""></div>
+          <div class="game-pink" data-drum="1"><img data-asset="assets/drum-variant-1.png" alt=""></div>
+          <div class="game-duck-shadow" aria-hidden="true">
+            <img class="duck-shadow-pink" data-asset="assets/game-duck-shadow.svg" alt="">
+            <img class="duck-shadow-warm" data-asset="assets/game-duck-shadow-warm.svg" alt="">
+          </div>
+          <img class="game-duck" data-asset="assets/game-duck.png" alt="" width="62" height="79">
+          <canvas class="game-facing-turn" width="396" height="396" hidden aria-hidden="true"></canvas>
+        </div>
+        <div class="game-ui">
+          <p class="game-progress" hidden aria-live="polite"><span>已跳</span><strong> x 0</strong><span>步</span><small>进度</small></p>
+          <div class="touch-hint" aria-hidden="true">
+            <img class="touch-ring" data-asset="assets/touch-ring.svg" alt="">
+            <img class="touch-dot" data-asset="assets/touch-center.svg" alt="">
+            <img class="touch-glow" data-asset="assets/touch-glow.svg" alt="">
+            <img class="touch-hand" data-asset="assets/game-hand.png" alt="">
+          </div>
+          <p class="game-instruction">长按屏幕任意位置蓄力</p>
+        </div>
+      </section>
+<section id="game-over" class="result-screen" role="dialog" aria-modal="true" aria-label="本局成绩" hidden>
+      <img data-asset="assets/result-img.svg" alt="" style="left:177.8px;top:103.8px;mix-blend-mode:plus-lighter;">
+      <img data-asset="assets/result-imgVector89.svg" alt="" style="left:41.4px;top:141.3px;transform:rotate(17.25deg) skewX(.84deg);">
+      <img data-asset="assets/result-img1.svg" alt="" style="left:42.27px;top:153.969px;">
+      <img data-asset="assets/result-img2.svg" alt="" style="left:43px;top:154px;">
+      <img data-asset="assets/result-imgIp.png" alt="" style="left:216px;top:118px;width:147px;height:163px;object-fit:cover;">
+      <img data-asset="assets/result-title.svg" alt="" style="left:70.968px;top:148.355px;">
+      <img data-asset="assets/result-imgEllipse236.svg" alt="" style="left:56px;top:167px;">
+      <img data-asset="assets/result-imgVector87.svg" alt="" style="left:58.115px;top:159.064px;transform:rotate(19.75deg) skewX(.94deg);">
+      <div class="result-rewards-card"></div>
+      <img data-asset="assets/result-img3.svg" alt="" style="left:32px;top:199.5px;">
+      <img data-asset="assets/result-img4.svg" alt="" style="left:66px;top:377px;">
+      <div class="result-total"><strong class="result-steps">0</strong><span>步</span></div>
+      <img data-asset="assets/result-imgLine10.svg" alt="" style="left:95px;top:327px;transform:rotate(.31deg);">
+      <span class="result-earned-label">本局获得</span>
+      <img data-asset="assets/result-img15381E381Ab8932Fb1Ff707Cd2D4444D47D918D117D137WxoQxFw480Webp2.png" alt="" style="left:224.895px;top:336.364px;width:15.739px;height:20.57px;object-fit:cover;transform:rotate(11.52deg);">
+      <strong class="result-waves">0</strong>
+      <img data-asset="assets/result-imgVector88.svg" alt="" style="left:144.46px;top:457.73px;transform:rotate(-3.04deg);">
+      <span class="result-rewards-title">音浪可兑换</span>
+      <img data-asset="assets/result-img5.svg" alt="" style="left:78px;top:453.5px;">
+      <img data-asset="assets/result-img6.svg" alt="" style="left:125px;top:449px;">
+      <img data-asset="assets/result-img7.svg" alt="" style="left:245.99px;top:453.5px;transform:scaleX(-1);">
+      <img data-asset="assets/result-img8.svg" alt="" style="left:238px;top:449px;transform:scaleX(-1);">
+      <div class="result-prize-bg" style="left:96px"></div><span class="result-prize-label" style="left:94px">WatchSE3</span>
+      <div class="result-prize-bg" style="left:160px"></div><span class="result-prize-label" style="left:158px">优酷月卡</span>
+      <div class="result-prize-bg" style="left:227px"></div><span class="result-prize-label" style="left:225px">iPhone手机</span>
+      <img data-asset="assets/result-imgWacth.png" alt="" style="left:103px;top:487px;width:27px;height:25px;object-fit:cover;">
+      <img data-asset="assets/result-imgIphone.png" alt="" style="left:234px;top:484px;width:28px;height:31px;object-fit:cover;">
+      <div class="result-crop" style="left:171px;top:489px;width:20px;height:24px"><img data-asset="assets/result-img9.png" alt="" style="width:137.74%;height:134.58%;left:-23.27%;top:0"></div>
+      <img data-asset="assets/result-imgEllipse275.svg" alt="" style="left:237.7px;top:141.7px;">
+      <img data-asset="assets/result-imgEllipse274.svg" alt="" style="left:240px;top:144px;">
+      <img data-asset="assets/result-imgEllipse276.svg" alt="" style="left:210.7px;top:191.7px;">
+      <img data-asset="assets/result-imgEllipse277.svg" alt="" style="left:212.75px;top:193.75px;">
+      <img data-asset="assets/result-imgEllipse278.svg" alt="" style="left:327.7px;top:167.7px;">
+      <img data-asset="assets/result-imgEllipse279.svg" alt="" style="left:329.5px;top:169.5px;">
+      <img data-asset="assets/result-img11.png" alt="" style="left:51px;top:192px;width:32px;height:32px;object-fit:cover;">
+      <button id="close-result" aria-label="关闭成绩，返回准备界面"><img data-asset="assets/result-img12.svg" alt=""></button><button id="share-result">分享</button><button id="retry-game">再来一局</button>
+      </section>
+      <p class="announcement" role="status" aria-live="polite"></p>
+    </div>
+  </main>
+  <script src="bundle-root.js"></script><script>document.querySelectorAll('[data-asset]').forEach(el=>el.src=assetUrl(el.dataset.asset));</script><script src="game-waves.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

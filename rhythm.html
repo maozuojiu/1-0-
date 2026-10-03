@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>音游小游戏</title>
+  <link rel="stylesheet" href="rhythm.css">
+</head>
+<body>
+  <main class="viewport" aria-label="音游小游戏">
+    <div class="screen" data-node-id="2085:4126">
+      <div class="background" aria-hidden="true">
+        <div class="warm-glow"></div><img class="room" data-asset="assets/rhythm/img.png" alt="">
+        <div class="right-glow"></div><img class="left-glow" data-asset="assets/rhythm/imgEllipse323.svg" alt=""><div class="top-glow"></div>
+      </div>
+      <div class="status" aria-hidden="true"><span>9:41</span><img data-asset="assets/rhythm/imgSignalWifiBattery.svg" alt=""></div>
+      <button class="back" aria-label="返回"><img data-asset="assets/rhythm/img1.svg" alt=""></button>
+      <button class="pause" aria-label="暂停" aria-pressed="false"><i></i><i></i></button>
+      <section class="stats" aria-label="游戏数据">
+        <div><span>音浪</span><strong id="waves">0</strong></div>
+        <div><span>分数</span><strong id="score">0</strong></div>
+        <div><span>倒计时</span><strong id="timer">30</strong></div>
+      </section>
+      <img class="target" data-asset="assets/rhythm/img2.svg" alt="节奏判定圈">
+      <img class="lesson-background-note" data-asset="assets/rhythm/note-single.png" alt="">
+      <div class="song-notes" aria-hidden="true"></div>
+      <div class="judgment" aria-live="polite" aria-atomic="true"></div>
+      <img class="duck-shadow" data-asset="assets/rhythm/imgEllipse210.svg" alt="">
+      <div class="duck-position" role="img" aria-label="小鸭打鼓"><img class="drum-frame is-current" data-asset="assets/rhythm/drum-frames/1.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"><img class="drum-frame" data-asset="assets/rhythm/drum-frames/2.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"><img class="drum-frame" data-asset="assets/rhythm/drum-frames/3.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"><img class="drum-frame" data-asset="assets/rhythm/drum-frames/4.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"><img class="drum-frame" data-asset="assets/rhythm/drum-frames/5.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"><img class="drum-frame" data-asset="assets/rhythm/drum-frames/6.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"><img class="drum-frame" data-asset="assets/rhythm/drum-frames/7.png" width="601" height="601" alt="" aria-hidden="true" decoding="async"></div>
+      <button class="power slow" aria-label="乐曲减速，剩余0张">
+        <img class="power-shadow" data-asset="assets/rhythm/imgEllipse388.svg" alt=""><img class="bubble" data-asset="assets/rhythm/img3.png" alt=""><img class="power-icon" data-asset="assets/rhythm/img9F9E0211Eb7848FaB97B83522679D9261.png" alt=""><span class="power-label">乐曲减速</span><span class="count" id="slow-count">x0</span>
+      </button>
+      <button class="power revive" aria-label="复活卡，剩余0张">
+        <img class="power-shadow" data-asset="assets/rhythm/imgEllipse387.svg" alt=""><img class="bubble" data-asset="assets/rhythm/img3.png" alt=""><img class="power-icon" data-asset="assets/rhythm/img1790409854662CocoAi2026092616055211.png" alt=""><span class="power-label">复活卡</span><span class="count" id="revive-count">x0</span>
+      </button>
+      <button class="beat" aria-label="敲击鼓点，开始游戏"><img data-asset="assets/rhythm/img4.svg" alt=""></button>
+        <img class="lesson-ring" data-asset="assets/rhythm/tutorial/img2.svg" alt="判定圈">
+        <img class="lesson-note" data-asset="assets/rhythm/tutorial/img3.png" alt="练习音符">
+      <div class="guide-shade" aria-hidden="true"></div>
+      <section class="guide" data-phase="loading" aria-label="游戏教学与开局倒计时">
+        <div class="lesson-card">
+          <img class="lesson-glow" data-asset="assets/rhythm/tutorial/imgEllipse386.svg" alt="">
+          <img class="lesson-tail" data-asset="assets/rhythm/tutorial/imgVector111.svg" alt="">
+          <div class="lesson-glass"></div>
+          <img class="lesson-fill" data-asset="assets/rhythm/tutorial/imgRectangle582.svg" alt="">
+          <img class="lesson-pattern" data-asset="assets/rhythm/tutorial/imgMaskGroup.svg" alt="">
+          <img class="lesson-border" data-asset="assets/rhythm/tutorial/imgRectangle585.svg" alt="">
+          <img class="lesson-dot" data-asset="assets/rhythm/tutorial/imgEllipse304.svg" alt="">
+          <img class="lesson-ribbon" data-asset="assets/rhythm/tutorial/imgVector110.svg" alt="">
+          <img class="lesson-star" data-asset="assets/rhythm/tutorial/img1Efcab74F718305D5Cf713516147B333902Baa1D80DbStEbmQFw480Webp1.png" alt="">
+          <img class="lesson-hand-right" data-asset="assets/rhythm/tutorial/imgEllipse383.svg" alt="">
+          <img class="lesson-hand-left" data-asset="assets/rhythm/tutorial/imgEllipse384.svg" alt="">
+          <div class="lesson-duck"><img data-asset="assets/rhythm/tutorial/img17903235287471.png" alt=""></div>
+          <div class="lesson-mini-star"><img data-asset="assets/rhythm/tutorial/img1Efcab74F718305D5Cf713516147B333902Baa1D80DbStEbmQFw480Webp1.png" alt=""></div>
+          <h2 class="lesson-title">第一步</h2>
+          <p class="lesson-message" role="status">「乐曲减速」道具可让节奏变慢</p>
+          <small class="lesson-hint">点击空白处继续</small>
+        </div>
+        <div class="lesson-arrow"><div><img data-asset="assets/rhythm/tutorial/img4.png" alt=""></div></div>
+        <div class="guide-number" role="status" aria-live="assertive" hidden>3</div>
+      </section>
+<section id="game-over" class="result-screen" role="dialog" aria-modal="true" aria-label="本局成绩" tabindex="-1" hidden>
+      <img data-asset="assets/result-img.svg" alt="" style="left:177.8px;top:103.8px;mix-blend-mode:plus-lighter;">
+      <img data-asset="assets/result-imgVector89.svg" alt="" style="left:41.4px;top:141.3px;transform:rotate(17.25deg) skewX(.84deg);">
+      <img data-asset="assets/result-img1.svg" alt="" style="left:42.27px;top:153.969px;">
+      <img data-asset="assets/result-img2.svg" alt="" style="left:43px;top:154px;">
+      <img data-asset="assets/result-imgIp.png" alt="" style="left:216px;top:118px;width:147px;height:163px;object-fit:cover;">
+      <img data-asset="assets/result-title.svg" alt="" style="left:70.968px;top:148.355px;">
+      <img data-asset="assets/result-imgEllipse236.svg" alt="" style="left:56px;top:167px;">
+      <img data-asset="assets/result-imgVector87.svg" alt="" style="left:58.115px;top:159.064px;transform:rotate(19.75deg) skewX(.94deg);">
+      <div class="result-rewards-card"></div>
+      <img data-asset="assets/result-img3.svg" alt="" style="left:32px;top:199.5px;">
+      <img data-asset="assets/result-img4.svg" alt="" style="left:66px;top:377px;">
+      <div class="result-total"><strong class="result-score">0</strong><span>分</span></div>
+      <img data-asset="assets/result-imgLine10.svg" alt="" style="left:95px;top:327px;transform:rotate(.31deg);">
+      <span class="result-earned-label">本局获得</span>
+      <img data-asset="assets/result-img15381E381Ab8932Fb1Ff707Cd2D4444D47D918D117D137WxoQxFw480Webp2.png" alt="" style="left:224.895px;top:336.364px;width:15.739px;height:20.57px;object-fit:cover;transform:rotate(11.52deg);">
+      <strong class="result-waves">0</strong>
+      <img data-asset="assets/result-imgVector88.svg" alt="" style="left:144.46px;top:457.73px;transform:rotate(-3.04deg);">
+      <span class="result-rewards-title">音浪可兑换</span>
+      <img data-asset="assets/result-img5.svg" alt="" style="left:78px;top:453.5px;">
+      <img data-asset="assets/result-img6.svg" alt="" style="left:125px;top:449px;">
+      <img data-asset="assets/result-img7.svg" alt="" style="left:245.99px;top:453.5px;transform:scaleX(-1);">
+      <img data-asset="assets/result-img8.svg" alt="" style="left:238px;top:449px;transform:scaleX(-1);">
+      <div class="result-prize-bg" style="left:96px"></div><span class="result-prize-label" style="left:87px">WatchSE3</span>
+      <div class="result-prize-bg" style="left:166px"></div><span class="result-prize-label" style="left:157px">优酷月卡</span>
+      <div class="result-prize-bg" style="left:236px"></div><span class="result-prize-label" style="left:227px">iPhone手机</span>
+      <img data-asset="assets/result-imgWacth.png" alt="" style="left:103px;top:487px;width:27px;height:25px;object-fit:cover;">
+      <div class="result-crop" style="left:176px;top:487px;width:22px;height:26px"><img data-asset="assets/result-img9.png" alt="" style="width:137.74%;height:134.58%;left:-23.27%;top:0"></div>
+      <img data-asset="assets/result-imgIphone.png" alt="" style="left:243px;top:484px;width:28px;height:31px;object-fit:cover;">
+      <img data-asset="assets/result-imgEllipse275.svg" alt="" style="left:237.7px;top:141.7px;">
+      <img data-asset="assets/result-imgEllipse274.svg" alt="" style="left:240px;top:144px;">
+      <img data-asset="assets/result-imgEllipse276.svg" alt="" style="left:210.7px;top:191.7px;">
+      <img data-asset="assets/result-imgEllipse277.svg" alt="" style="left:212.75px;top:193.75px;">
+      <img data-asset="assets/result-imgEllipse278.svg" alt="" style="left:327.7px;top:167.7px;">
+      <img data-asset="assets/result-imgEllipse279.svg" alt="" style="left:329.5px;top:169.5px;">
+      <img data-asset="assets/result-img11.png" alt="" style="left:51px;top:192px;width:32px;height:32px;object-fit:cover;">
+      <button id="close-result" aria-label="返回主会场"><img data-asset="assets/result-img12.svg" alt=""></button><button id="share-result">分享</button><button id="retry-game">再来一局</button>
+</section>
+      <section id="revive-prompt" class="revive-overlay" role="dialog" aria-modal="true" aria-labelledby="revive-title" hidden>
+        <div class="revive-art">
+          <img data-asset="assets/rhythm/revive-prompt-reference.png" alt="游戏失败。是否使用复活卡？">
+          <h2 id="revive-title" class="visually-hidden">游戏失败</h2>
+          <button type="button" id="give-up" aria-label="残忍退出"></button>
+          <button type="button" id="use-revive" aria-label="我要复活"></button>
+        </div>
+      </section>
+      <div class="home-indicator" aria-hidden="true"></div>
+      <div class="toast" role="status" hidden></div>
+      <div class="pause-overlay" hidden aria-label="游戏已暂停">
+        <button class="resume" aria-label="继续游戏"><svg width="90" height="100" viewBox="0 0 90 100" aria-hidden="true"><path d="M17 5 Q5 -2 5 13 V87 Q5 102 18 95 L80 59 Q94 50 80 41 Z" fill="white"/></svg></button>
+        <div class="resume-number" role="status" aria-live="assertive" hidden>3</div>
+      </div>
+    </div>
+  </main>
+  <script src="bundle-root.js"></script><script>document.querySelectorAll('[data-asset]').forEach(el=>el.src=assetUrl(el.dataset.asset));</script><script src="game-waves.js"></script>
+  <script src="rhythm-song.js"></script>
+  <script src="rhythm.js"></script>
+</body>
+</html>
